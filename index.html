@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Covid-19 Phase Checking</title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="jvscript.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar center">
+        <span class="tooltiptext">เลือกเพื่อไปยังส่วนต่างๆ</span>
+        <a class="nav" href="#program">Use Program</a>
+        <a class="nav" href="#reference">Reference</a>
+        <a class="nav" href="#members">Members</a>
+    </div>
+    <div class="m30px"></div>
+    <div class="flex" id="program">
+        <div class="web-topic center">
+            ตรวจสอบระยะ Covid-19
+        </div>
+        <div class="web-inside">
+            <section>
+                <div class="image">
+                    <img class="DFA" id="pic" src="state/TOC (5) (1).png">
+                </div>
+
+                <div class="flex inside">
+                    <div class="flex-left">
+                        <!--<section class="input">-->
+                        <div class="flex center">
+                            <div class="topic">
+                                <h3>STATE</h3>
+                            </div>
+                            <div class="state_accept center blinking" id="state_accept">
+                                <p class="center">ACCEPT !</p>
+                            </div>
+                            <div class="check_state center">
+                                <p class="br center" id="check_state">ระยะที่ 0 ไม่พบผู้ป่วยและการแพร่โรคในประเทศไทย</p>
+                                <p class="br can-ans center" id="c_answer">Input ที่จะไม่ทำให้เข้าสู่ Trap state:<br>
+                                    Detect = พบผู้ป่วยรายใหม่</p>
+                            </div>
+                        </div>
+
+                        <!--</section>-->
+                    </div>
+
+                    <div class="flex-right">
+                        <div class="flex center">
+                            <div class="topic">
+                                <h3>INPUT</h3>
+                            </div>
+                            <!--<div class="input">-->
+                                <div class="my_sequence">
+                                    <p id="my_sequence"></p>
+                                </div>
+                                <div>
+                                    <div class="set-btn">
+                                        <input class="btn" type="button" value="Yes" onclick="yes()"><br>
+                                        <input class="btn" type="button" value="No" onclick="no()"><br>
+                                        <input class="btn" type="button" value="Unknown" onclick="unknown()"><br>
+                                        <input class="btn" type="button" value="Detect" onclick="detect()"><br>
+                                    </div>
+                                    <div class="right">
+                                        <input class="btn-reset" type="button" value="Reset" onclick="reset()">
+                                    </div>
+                                </div>
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="ref" id="reference">
+        <div class="center"><p class="ref-topic-frame">REFERENCE</p></div>
+        <div class="center">
+            <table>
+                <tr>
+                    <td><img width="600px" src="ref/phase.jpg" alt=""></td>
+                    <td><text class="drop-cap">
+                        <big>“ทำไมถึงยังไม่เข้าเฟส 3” ความแตกต่างระหว่างการระบาดโควิด-19 ระยะที่ 2 และ 3</big><br><br>
+                        " ระยะที่ 2 มีการระบาดในชุมชนเป็นวงแคบ และการระบาดนั้นสามารถสืบค้นได้ว่าใครติดจากใครอย่างชัดเจน<br>ส่วนระยะที่ 3 คือการระบาดในชุมชนอย่างกว้างขวางและต่อเนื่อง โดยไม่ทราบว่าใครติดจากใครหรือแหล่งใดอย่างชัดเจน "
+                    </text><br><br>
+                    <text>ลิงค์อ้างอิง : </text>
+                        <a target="_blank" href="https://themomentum.co/phase-2-and-3-of-covid-19-outbreak/">“ทำไมถึงยังไม่เข้าเฟส 3” ความแตกต่างระหว่างการระบาดโควิด-19 ระยะที่ 2 และ 3</a>
+                </td>
+                </tr>
+            </table>
+        </div>
+        <div class="center">
+            <table>
+                <tr>
+                    <td class="ref-pic-block"><img class="ref-pic" src="ref/predict.jpg" alt=""></td>
+                    <td class="ref-pic-block"><img class="ref-pic" src="ref/covid-19daily.jpg" alt=""></td>
+                    <td class="ref-pic-block"><img class="ref-pic" src="ref/phase123.jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="ref-text">
+                        <text>ลิงค์อ้างอิง : </text>
+                        <a target="_blank" href="https://www.tcijthai.com/news/2020/3/watch/9999">คาดการณ์การระบาดและมาตรการในระยะที่ 3 โรคติดเชื้อไวรัสโคโรนา 2019</a>
+                    </td>
+                    <td class="ref-text">
+                        <text>ลิงค์อ้างอิง : </text>
+                        <a target="_blank" href="https://data.go.th/dataset/covid-19-daily?id=93f74e67-6f76-4b25-8f5d-b485083100b6&is_fullscreen=1">รายงาน COVID-19 ประจำวัน</a>
+                    </td>
+                    <td>
+                        <text>ลิงค์อ้างอิง : </text>
+                        <a target="_blank" href="https://www.thebangkokinsight.com/308315/">3 ฉากทัศน์ 6 ทางรอด 'ไวรัส COVID-19' ระบาดระยะที่ 3</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+<footer class="center" id="members">
+    <big>รายชื่อผู้จัดทำ</big><br>
+    [59011453] นายสุรพัศ ไตรรัตนธาดา<br>
+    [60010242] นางสาวชื่นจิต วิศิลป์<br>
+    [60010304] นายณัฐธรรม วัฒนขจรกุล<br>
+    [60010477] นายธีรภัทร ฉัตรตระกูล<br>
+    [60010888] นางสาววรกมล ฉินประสิทธิชัย
+</footer>
+
+</html>
